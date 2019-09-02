@@ -86,3 +86,12 @@ bottomContent[1].querySelector('h4').textContent = siteContent['main-content']['
 bottomContent[1].querySelector('p').textContent = siteContent['main-content']['product-content'];
 bottomContent[2].querySelector('h4').textContent = siteContent['main-content']['vision-h4'];
 bottomContent[2].querySelector('p').textContent = siteContent['main-content']['vision-content'];
+
+//contact
+let contactSection = document.querySelector('.contact');
+let contactSectionParagraphs = Array.from(contactSection.querySelectorAll('p'));
+
+contactSection.querySelector('h4').textContent = siteContent['contact']['contact-h4'];
+contactSectionParagraphs[0].textContent = siteContent['contact']['address'];
+contactSectionParagraphs[1].textContent = siteContent['contact']['phone'];
+contactSectionParagraphs[2].textContent = siteContent['contact']['email'];
