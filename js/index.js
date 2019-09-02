@@ -53,6 +53,7 @@ navLinks[3].textContent = siteContent['nav']['nav-item-4'];
 navLinks[4].textContent = siteContent['nav']['nav-item-5'];
 navLinks[5].textContent = siteContent['nav']['nav-item-6'];
 
+
 //cta
 
 let ctaHeading = document.querySelector('.cta-text h1');
@@ -93,7 +94,7 @@ let contactSection = document.querySelector('.contact');
 let contactSectionParagraphs = Array.from(contactSection.querySelectorAll('p'));
 
 contactSection.querySelector('h4').textContent = siteContent['contact']['contact-h4'];
-contactSectionParagraphs[0].textContent = siteContent['contact']['address'];
+contactSectionParagraphs[0].innerHTML = siteContent['contact']['address'];
 contactSectionParagraphs[1].textContent = siteContent['contact']['phone'];
 contactSectionParagraphs[2].textContent = siteContent['contact']['email'];
 
@@ -101,3 +102,17 @@ contactSectionParagraphs[2].textContent = siteContent['contact']['email'];
 let footerText = document.querySelector('footer p');
 
 footerText.textContent = siteContent['footer']['copyright'];
+
+//task 3
+navLinks.forEach(link => link.style.color = 'green');
+let newNavLink = document.createElement('a');
+newNavLink.innerText = 'Blog';
+// document.querySelector('nav').appendChild(newNavLink);
+// document.querySelector('nav').prepend(newNavLink);
+
+
+//stretch
+let bgColorButton = document.createElement('button');
+bgColorButton.innerText = 'Change My Background Colour';
+bgColorButton.setAttribute('onclick', "document.querySelector('body').style.backgroundColor = 'pink'"); 
+contactSection.appendChild(bgColorButton);
