@@ -59,7 +59,8 @@ let ctaHeading = document.querySelector('.cta-text h1');
 let ctaButton = document.querySelector('.cta-text button');
 let ctaImg = document.querySelector('#cta-img');
 
-ctaHeading.textContent = siteContent['cta']['h1'];
+
+ctaHeading.innerHTML = siteContent['cta']['h1'].split(' ').join('<br>');
 ctaButton.textContent = siteContent['cta']['button'];
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 
